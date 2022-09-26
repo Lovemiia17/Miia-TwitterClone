@@ -31,6 +31,11 @@ SECRET_KEY = 'django-insecure-pbw!#6oq9z26z_^kb8#==4(-1cwfu!sh02mowx1)b$r24*@hwd
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+X_FRAME_OPTIONS = '*'
+CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = [
+    'http://0.0.0.0:3000', ''
+]
 
 
 # Application definition
@@ -44,9 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'posts',
     'cloudinary',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -138,3 +145,5 @@ cloudinary.config (
     api_secret = "cvp5fL_A8FJ50d-HLx0S3dIeDBY",
     secure = True
 )
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
