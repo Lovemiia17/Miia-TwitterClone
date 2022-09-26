@@ -1,0 +1,213 @@
+/*
+Common
+*****************/
+
+html,
+body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.content {
+    max-width: 600px;
+    max-height: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+/*
+Home
+******************/
+
+.home img {
+    width: 50px;
+    margin-right: 5px;
+
+}
+
+.home h1 {
+    display: inline;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.home  {
+    margin: 0 auto;
+    width: 580px;
+    padding: 20px 10px;
+    border: 1px solid #CCC;
+}
+
+/*
+Posts
+*****************/
+
+.content .tweet_btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.content .tweet_btn .upload-file {
+    background-color: white;
+    width: 250px;
+    border: 1px solid #CCC;
+    border-radius: 2px;
+    padding: 0px;
+}
+
+.post_form .user_icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post_form {
+    padding: 20px 20px;
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    gap: 10px;
+}
+
+.post_form input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #CEF6F5;
+    border: 0px solid #CCC;
+    font-size: 16px;
+}
+
+.post_form textarea {
+    width: 100%;
+    height: 85px;
+    padding: 10px;
+    border: 0px solid #CCC;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.post_form form {
+    width: 85%;
+}
+
+.posts ul {
+    padding: 0;
+}
+
+.posts li {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #CCC;
+    padding: 20px 35px;
+    list-style: none;
+}
+
+.posts li .menu_icon {
+    width: 20px;
+    position: absolute;
+    top: 0%;
+    right: 18px;
+}
+
+.posts li .menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border: 1px solid #CCC;
+    background-color: white;
+    padding: 25px 18px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.posts li .menu a {
+    text-decoration: none;
+}
+
+.posts li .logo {
+    flex-basis: 15%;
+}
+
+.posts li .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.posts li .name_body {
+    flex-basis: 85%;
+}
+
+.posts li .name_body .name {
+    font-weight: bold;
+}
+
+.posts li .name_body .datetime {
+    color: gray;
+}
+
+.posts li .name_body img {
+    width: 25px;
+    height: 25px;
+}
+
+@media screen and (max-width: 500px) {
+    .posts li ,.name_body .name{
+        font-size: 20px;
+    }
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    width: 17%;
+    padding: 2%;
+    border: none;
+    background-color: #01A9DB;
+    border-radius: 5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/*
+.tweet_btn button {
+  margin: 0px 40px 0px 90px;
+}
+*/
+
+
+/*
+Edit Page
+*******************/
+
+.post_form .flex {
+    display: flex;
+    gap: 6%;
+    align-items: baseline;
+}
+
+.post_form .flex .upload-file {
+  background-color: white;
+  width: 250px;
+  border: 1px solid #CCC;
+  border-radius: 2px;
+  padding: 0px;
+}
+
+.post_form .flex .cancel {
+  background-color: gray;
+}

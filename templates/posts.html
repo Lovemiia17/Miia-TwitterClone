@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<section class="home">
+    <div class="home_div">
+        <img class="twitter_icon" src="{% static 'img/logo-twitterblue.svg' %}" />
+        <h1> Home</h1>
+    </div>
+</section>
+<section class="content">
+    {% load static %}
+    <section class="post_form">
+        <div class="user_icon">
+            <img src="{% static 'img/sample-icon.jpg' %}" />
+        </div>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+            <textarea type="textarea" name="body" placeholder="What's Happening?" required></textarea>
+            <div class="tweet_btn">
+                <input class="upload-file" type="file" value="Choose File" name="image">
+                <button type="submit">Tweet</button>
+            </div>
+      
+        </form>
+</section>
+    <section class="posts">
+        <ul>
+        {% for post in posts %}
+        <li> 
+            <img class="menu_icon js-menu-icon" src="{% static 'img/option.png' %}" />
+            <div class="menu">
+                <a href="/edit/{{ post.id }}/">Edit</a>
+                <br>
+                <br>
+                <a href="/delete/{{ post.id  }}/">Delete</a>
+            </div>
+            <div class="logo">
+                <img src="{% static 'img/sample-icon.jpg' %}" />
+            </div>
+            <div class="name_body">
+                <div class="name">{{ post.name }}</div>
+                <div class="datetime">{{ post.created_at }}</div>
+                <br>
+                <p>{{ post.body }}</p>
+                <br>
+                {% if post.image %}
+                 <img class="post-border" src ="{{ post.image.url }}" style="width:370px; height:370px;">
+                
+                {% endif %}
+                <div class="like">
+                    <a href="/like/{{post.id}}/">
+                        <img src="{% static 'img/icon-heart-gray.svg' %}" />
+                        {{ post.likes }}
+                    </a>
+                </div>
+
+            </div>
+            
+                
+        </li>
+        {% endfor %}
+        </ul>
+    </section>
+    <script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous">
+    </script>
+    <script src="{% static 'js/posts.js' %}">
+    </script>
+
+
+</section>
+{% endblock %}
