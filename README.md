@@ -4,7 +4,7 @@ This Twitter Clone is a small project using HTML / CSS / JavaScript Using Django
 [Live Heroku Deployment](https://miia-twitterclone.lovemiia17.repl.co/)
 
 ## Screenshot:
- <img width="643" alt="Screenshot 2022-03-30 at 10 00 22 AM" src="">
+ <img width="643" alt="Screenshot 2022-03-30 at 10 00 22 AM" src="https://github.com/Lovemiia17/Miia-TwitterClone/blob/main/static/img/twitterclonemiia.png">
 
 
 
