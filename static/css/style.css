@@ -4,7 +4,7 @@ Common
 
 html,
 body {
-    height: 100%;
+   
     font-family: sans-serif;
 }
 
@@ -16,13 +16,21 @@ body {
     border-right: 1px solid #CCC;
 }
 
+.spacebtwn {
+    height: 15px;
+    border-top: 1px solid rgb(235, 238, 240);
+    border-bottom: 1px solid rgb(235, 238, 240);
+    background-color: rgb(247, 248, 248);
+    border-bottom: 1px solid rgb(235, 238, 240);
+}
+
 /*
 Home
 ******************/
 
 .home img {
     width: 50px;
-    margin-right: 5px;
+    margin-right: 20px;
 
 }
 
@@ -45,10 +53,17 @@ Posts
 *****************/
 
 .content .tweet_btn {
-  display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top: 1px solid rgb(235, 238, 240);
+    padding-top: 8px;
+}
+  /*display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
+  margin: 13px 0px;
+*/
 
 .content .tweet_btn .upload-file {
     background-color: white;
@@ -73,11 +88,10 @@ Posts
 
 .post_form input{
     width: 100%;
-    height: 30px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
-    background-color: #CEF6F5;
+    background-color: #e6fef7;
     border: 0px solid #CCC;
     font-size: 16px;
 }
@@ -86,10 +100,11 @@ Posts
     width: 100%;
     height: 85px;
     padding: 10px;
-    border: 0px solid #CCC;
+    /*border-bottom: 1px solid #CCC;*/
     border-radius: 5px;
     font-size: 16px;
     font-family: sans-serif;
+    border: 0px;
 }
 
 .post_form form {
@@ -111,15 +126,15 @@ Posts
 .posts li .menu_icon {
     width: 20px;
     position: absolute;
-    top: 0%;
+    top: 15px;
     right: 18px;
 }
 
 .posts li .menu {
     display: none;
     position: absolute;
-    top: 20px;
-    right: 15px;
+    top: 1px;
+    right: 46px;
     border: 1px solid #CCC;
     background-color: white;
     padding: 25px 18px;
@@ -129,7 +144,14 @@ Posts
 
 .posts li .menu a {
     text-decoration: none;
+    color: rgb(29, 161, 242);
 }
+
+.like a {
+    text-decoration: none;
+    color: gray;
+}
+
 
 .posts li .logo {
     flex-basis: 15%;
@@ -182,13 +204,6 @@ button {
     font-size: 17px;
     font-weight: 600;
 }
-
-/*
-.tweet_btn button {
-  margin: 0px 40px 0px 90px;
-}
-*/
-
 
 /*
 Edit Page

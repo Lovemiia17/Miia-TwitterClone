@@ -19,13 +19,13 @@
             <div class="tweet_btn">
                 <input class="upload-file" type="file" value="Choose File" name="image">
                 <button type="submit">Tweet</button>
-            </div>
-      
+            </div>   
         </form>
 </section>
-    <section class="posts">
-        <ul>
-        {% for post in posts %}
+<section class="spacebtwn" ></section>
+<section class="posts">
+    <ul>
+    {% for post in posts %}
         <li> 
             <img class="menu_icon js-menu-icon" src="{% static 'img/option.png' %}" />
             <div class="menu">
@@ -44,7 +44,7 @@
                 <p>{{ post.body }}</p>
                 <br>
                 {% if post.image %}
-                 <img class="post-border" src ="{{ post.image.url }}" style="width:370px; height:370px;">
+                <img class="post-border" src ="{{ post.image.url }}" style="width:370px; height:370px;" />
                 
                 {% endif %}
                 <div class="like">
@@ -59,8 +59,8 @@
                 
         </li>
         {% endfor %}
-        </ul>
-    </section>
+    </ul>
+        </section>
     <script
         src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
